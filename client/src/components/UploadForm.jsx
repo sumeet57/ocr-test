@@ -44,7 +44,7 @@ const UploadForm = () => {
       setError("");
       setExtractedData(null);
 
-      const response = await axios.post("http://localhost:5000/api/upload", formData, {
+      const response = await axios.post("https://ocrtest-jr0y.onrender.com/api/upload", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
