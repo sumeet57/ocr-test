@@ -46,12 +46,12 @@ export const uploadDocument = async (req, res) => {
     }
 
     // ✅ Prevent storing empty values in MongoDB
-    const aadharNumber = prediction.fields.get("aadhar_number")?.value;
-    const fullName = prediction.fields.get("full_name")?.value;
-    const address = prediction.fields.get("address")?.value;
-    const gender = prediction.fields.get("gender")?.value;
-    const phoneNumber = prediction.fields.get("phone_number")?.value;
-    const dob = prediction.fields.get("date_of_birth")?.value;
+    const aadharNumber = prediction.fields.get("aadhar_number")?.value || "NAN";
+    const fullName = prediction.fields.get("full_name")?.value || "NAN";
+    const address = prediction.fields.get("address")?.value || "NAN";
+    const gender = prediction.fields.get("gender")?.value || "NAN";
+    const phoneNumber = prediction.fields.get("phone_number")?.value || "NAN";
+    const dob = prediction.fields.get("date_of_birth")?.value || "NAN";
 
 
     if (
